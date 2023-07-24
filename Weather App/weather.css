@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #508795;
+}
+
+.location{
+    position: relative;
+    width: 500px;
+    height: 105px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 1.8rem;
+    transition: 0.6s ease-out;
+    padding: 1rem;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    height: 2.3rem;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box img{
+    width: 250px;
+    border-radius: 2rem;
+}
+
+.weather-box .temperature{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.weather-box .description{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .humidity, .details .wind{
+    display: flex;
+    
+}
+
+.details #wind_id, .details #humidity_id{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 8px;
+    padding-top: 3.2px;
+}
+
+.not-found{
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.weather-box, .details{
+    scale: 0;
+    opacity: 0;
+}
+
+.fade-in{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
